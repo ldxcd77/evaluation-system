@@ -1,0 +1,44 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.dashboard-grid .card {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 16px 0;
+}
+
+.activity-list {
+    margin-top: 16px;
+}
+
+.activity-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-time {
+    color: #999;
+    font-size: 14px;
+    margin-right: 16px;
+    min-width: 150px;
+}
+
+.activity-desc {
+    color: var(--text-color);
+} 

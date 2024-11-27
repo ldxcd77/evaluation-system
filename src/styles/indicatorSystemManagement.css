@@ -1,0 +1,220 @@
+.system-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.system-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 24px;
+}
+
+.system-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.system-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.system-card-header h3 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.system-card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.system-info {
+    margin-bottom: 20px;
+}
+
+.system-info p {
+    margin: 8px 0;
+}
+
+.system-indicators {
+    margin-top: 20px;
+}
+
+.system-indicators h4 {
+    margin-bottom: 16px;
+}
+
+.indicator-item {
+    background: #fafafa;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.indicator-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.indicator-settings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.setting-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.setting-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.setting-item label {
+    font-size: 12px;
+    color: #666;
+}
+
+.setting-item input {
+    padding: 4px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.add-indicator-button {
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    border: 1px dashed var(--border-color);
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    width: auto;
+}
+
+.remove-indicator {
+    background: none;
+    border: none;
+    color: #ff4d4f;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+.indicator-select-modal {
+    width: 500px;
+}
+
+.indicator-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.indicator-select-item {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.indicator-select-item:hover {
+    background-color: #f5f5f5;
+}
+
+.indicator-code {
+    color: #666;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .system-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .indicator-settings {
+        grid-template-columns: 1fr;
+    }
+}
+
+.indicators-table {
+    margin-top: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: auto;
+}
+
+.indicators-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.indicators-table th,
+.indicators-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.indicators-table th {
+    background-color: #fafafa;
+    font-weight: 500;
+}
+
+.table-input {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.table-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+.table-input[type="number"] {
+    width: 80px;
+}
+
+.remove-indicator {
+    padding: 4px 8px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-indicator:hover {
+    background-color: #ff7875;
+}
+
+.add-indicator-button {
+    margin-bottom: 0;
+}
+
+/* 调整模态框中的表格响应式布局 */
+@media (max-width: 768px) {
+    .indicators-table {
+        overflow-x: auto;
+    }
+    
+    .indicators-table table {
+        min-width: 800px;
+    }
+} 

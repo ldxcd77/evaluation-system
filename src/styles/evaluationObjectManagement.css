@@ -1,0 +1,106 @@
+.object-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.object-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 24px;
+}
+
+.object-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.object-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.object-card-header h3 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.object-card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.object-info {
+    margin-bottom: 20px;
+}
+
+.object-info p {
+    margin: 8px 0;
+}
+
+.dataset-info {
+    background: #fafafa;
+    padding: 16px;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.dataset-info h4 {
+    margin: 0 0 12px 0;
+    color: var(--text-color);
+}
+
+.config-button {
+    background-color: #722ed1;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.config-button:hover {
+    background-color: #8c51e0;
+}
+
+.dataset-modal {
+    width: 800px;
+}
+
+.field-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.field-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.field-item input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .object-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .dataset-modal {
+        width: 95vw;
+    }
+    
+    .field-grid {
+        grid-template-columns: 1fr;
+    }
+} 

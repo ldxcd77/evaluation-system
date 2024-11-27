@@ -1,0 +1,88 @@
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: #001529;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+.logo {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.menu {
+    padding: 16px 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.menu-icon {
+    margin-right: 8px;
+}
+
+.menu-item:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item.active {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.menu-group-title {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.65);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.menu-group-title:hover {
+    color: white;
+}
+
+.arrow {
+    margin-left: auto;
+    transition: transform 0.3s;
+    font-size: 12px;
+}
+
+.arrow.expanded {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.submenu.expanded {
+    max-height: 500px;
+}
+
+.submenu .menu-item {
+    padding-left: 48px;
+} 
